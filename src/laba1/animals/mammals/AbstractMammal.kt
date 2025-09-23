@@ -1,5 +1,5 @@
-package animals.mammals
-import animals.AbstractAnimal
+package laba1.animals.mammals
+import laba1.animals.AbstractAnimal
 
 abstract class AbstractMammal : AbstractAnimal {
     protected var paws : String

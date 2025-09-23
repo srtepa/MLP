@@ -1,2 +1,5 @@
-class Main {
+package laba1
+
+fun main(){
+
 }

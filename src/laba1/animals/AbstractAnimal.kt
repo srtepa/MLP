@@ -1,4 +1,4 @@
-package animals
+package laba1.animals
 
 abstract class AbstractAnimal {
     protected var body: String

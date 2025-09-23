@@ -1,4 +1,4 @@
-package animals.mammals
+package laba1.animals.mammals
 
 class Tiger : AbstractMammal {
     private var stripes = "Полосы на шерсти"
