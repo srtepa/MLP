@@ -7,5 +7,4 @@ abstract class AbstractBird : AbstractAnimal {
     constructor(body : String, wings : String ) : super(body){
         this.wings=wings
     }
-
 }
