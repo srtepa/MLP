@@ -1,7 +1,7 @@
 package laba1.animals.mammals
 
 class Tiger : AbstractMammal {
-    var type = "Тигр"
+    override var type = "Тигр"
     private var name: String
     private var age: Int
     private var numOfRoom: Int

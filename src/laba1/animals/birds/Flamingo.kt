@@ -1,7 +1,7 @@
 package laba1.animals.birds
 
 class Flamingo: AbstractBird {
-    var type = "Фламинго"
+    override var type = "Фламинго"
     private var name: String
     private var age: Int
     private var numOfRoom: Int

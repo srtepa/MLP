@@ -1,7 +1,7 @@
 package laba1.animals.birds
 
 class Ostrich: AbstractBird {
-    var type = "Страус"
+    override var type = "Страус"
     private var name: String
     private var age: Int
     private var numOfRoom: Int
