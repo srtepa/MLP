@@ -1,32 +1,31 @@
 package laba1.animals.mammals
 
-class Tiger : AbstractMammal {
-    var type = "Тигр"
+class Elephant: AbstractMammal {
+    var type = "Слон"
     private var name: String
     private var age: Int
     private var numOfRoom: Int
-    private var stripes = "Полосы на шерсти"
+    private var trunk: String
 
-    constructor(name: String, age: Int, body : String, paws : String, numOfRoom: Int) : super(body, paws){
-        this.body=body
-        this.paws=paws
+    constructor(name: String, age: Int, body: String, paws: String, trunk: String, numOfRoom: Int) : super(body, paws){
+        this.trunk=trunk
         this.age=age
         this.name=name
         this.numOfRoom=numOfRoom
     }
 
     override fun eat(): String {
-        return "Тигр $name ест!"
+        return "Слон ест!"
     }
 
     override fun getInfo(): String {
         return """
-            Информация о тигре:
+            животное: слон
                 имя: $name
                 возраст: $age
                 тело: $body
                 лапы: $paws
-                полосы: $stripes
+                хобот: $trunk
                 номер вольера: $numOfRoom
         """.trimIndent()
     }
