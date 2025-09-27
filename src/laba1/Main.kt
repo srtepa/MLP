@@ -9,14 +9,16 @@ import laba1.zoo.Zoo
 fun main() {
     val zoo = Zoo("Минский зоопарк", 10) //создаем зоопарк
 
-    val worker = Worker("Иван", 30, 5)
+    val worker = Worker("Иван", 30, 5)//создаем работника и животных
     val elephant = Elephant("Боб", 15, "Большое тело", "Толстые лапы", "Длинный хобот", 1)
     val ostrich = Ostrich("Оскар", 5, "Длинная шея", "Крылья", 3)
 
     zoo.addAnimal(elephant)
     zoo.addAnimal(ostrich)
+
     val viewer = Viewer("Алиса")
 
+    //реализовываем диаграмму последовательностей
     println("Зритель хочет посмотреть на животное...")
     zoo.acceptViewer(viewer)
     println()

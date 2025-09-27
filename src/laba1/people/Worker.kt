@@ -2,7 +2,7 @@ package laba1.people
 
 import laba1.animals.AbstractAnimal
 
-
+//класс работника с первичным конструктором
 class Worker(private var name: String, private var age: Int, private var experience: Int) {
     fun getInfo(){
         println("Информация о сотруднике:\n\tимя: $name\n\tвозраст: $age\n\tопыт работы: $experience")

@@ -1,19 +1,19 @@
 package laba1.animals.birds
 
 class Ostrich: AbstractBird {
-    override var type = "Страус"
+    override var type = "Страус"//поля класса
     private var name: String
     private var age: Int
     private var numOfRoom: Int
     private var runSpeed: String = "Очень быстро бегает"
 
-    constructor(name: String, age: Int, body: String, wings: String, numOfRoom: Int):super(body, wings){
+    constructor(name: String, age: Int, body: String, wings: String, numOfRoom: Int):super(body, wings){ //вторичный конструктор
         this.age=age
         this.name=name
         this.numOfRoom=numOfRoom
     }
 
-    override fun eat(): String{
+    override fun eat(): String{//переопределяем абс. ф-ции
         return "Страус $name ест мелких насекомых"
     }
 

@@ -1,10 +1,10 @@
 package laba1.animals
 
-abstract class AbstractAnimal {
+abstract class AbstractAnimal {//создаем абстрактный класс
     protected var body: String
     open var type = "Неопределенное животное"
 
-    constructor(){
+    constructor(){//создаем конструктора класса
         this.body = "Неопределенное животное"
     }
 
@@ -12,6 +12,7 @@ abstract class AbstractAnimal {
         this.body=body
     }
 
+    //объявляем абстрактные ф-ции
     abstract fun eat(): String
     abstract fun getInfo(): String
     abstract fun returnThanks(): String

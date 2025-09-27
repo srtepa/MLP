@@ -1,12 +1,13 @@
 package laba1.animals.mammals
 
 class Tiger : AbstractMammal {
-    override var type = "Тигр"
+    override var type = "Тигр"//поля класса
     private var name: String
     private var age: Int
     private var numOfRoom: Int
     private var stripes = "Полосы на шерсти"
 
+    //вторичный конструктор класса
     constructor(name: String, age: Int, body : String, paws : String, numOfRoom: Int) : super(body, paws){
         this.body=body
         this.paws=paws
@@ -15,6 +16,7 @@ class Tiger : AbstractMammal {
         this.numOfRoom=numOfRoom
     }
 
+    //переопред. ф-ции
     override fun eat(): String {
         return "Тигр $name ест!"
     }

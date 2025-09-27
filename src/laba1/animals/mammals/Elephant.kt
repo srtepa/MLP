@@ -1,12 +1,13 @@
 package laba1.animals.mammals
 
 class Elephant: AbstractMammal {
-    override var type = "Слон"
+    override var type = "Слон"//поля класса
     private var name: String
     private var age: Int
     private var numOfRoom: Int
     private var trunk: String
 
+    //вторичный конструктор
     constructor(name: String, age: Int, body: String, paws: String, trunk: String, numOfRoom: Int) : super(body, paws){
         this.trunk=trunk
         this.age=age
@@ -14,6 +15,7 @@ class Elephant: AbstractMammal {
         this.numOfRoom=numOfRoom
     }
 
+    //переопределенные абс. ф-ции
     override fun eat(): String {
         return "Слон ест!"
     }
