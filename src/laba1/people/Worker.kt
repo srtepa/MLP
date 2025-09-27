@@ -11,4 +11,8 @@ class Worker(private var name: String, private var age: Int, private var experie
     fun feedAnimal(animal: AbstractAnimal){
         println("Работник $name кормит животное ${animal.type}")
     }
+
+    fun cleanCage(animal: AbstractAnimal) {
+        println("Работник $name убирает клетку у животного ${animal.type}")
+    }
 }

@@ -25,14 +25,22 @@ fun main() {
 
     worker.feedAnimal(elephant)
     println(elephant.eat())
+    println()
+
     worker.feedAnimal(tiger)
     println(tiger.eat())
+    println()
+
     worker.feedAnimal(ostrich)
     println(ostrich.eat())
+    println()
+
     worker.feedAnimal(flamingo)
     println(flamingo.eat())
+    println()
 
-    println("Работник убирает клетку у тигра")
+    worker.cleanCage(tiger)
+    println()
 
     val viewer = Viewer("Алиса")
 
