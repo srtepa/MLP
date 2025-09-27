@@ -27,5 +27,7 @@ class Flamingo: AbstractBird {
         """.trimIndent()
     }
 
-
+    override fun returnThanks(): String {
+        return "Фламинго $name благодарит работника!"
+    }
 }

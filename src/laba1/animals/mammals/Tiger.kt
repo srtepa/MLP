@@ -30,4 +30,8 @@ class Tiger : AbstractMammal {
                 номер вольера: $numOfRoom
         """.trimIndent()
     }
+
+    override fun returnThanks(): String {
+        return "Тигр $name благодарит работника!"
+    }
 }

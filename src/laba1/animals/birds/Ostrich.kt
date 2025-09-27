@@ -28,4 +28,8 @@ class Ostrich: AbstractBird {
                 скорость бега: $runSpeed
         """.trimIndent()
     }
+
+    override fun returnThanks(): String {
+        return "Страус $name благодарит работника!"
+    }
 }

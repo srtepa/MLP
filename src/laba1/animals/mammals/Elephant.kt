@@ -29,4 +29,8 @@ class Elephant: AbstractMammal {
                 номер вольера: $numOfRoom
         """.trimIndent()
     }
+
+    override fun returnThanks(): String {
+        return "Слон $name благодарит работника!"
+    }
 }

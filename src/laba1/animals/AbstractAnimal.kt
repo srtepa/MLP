@@ -14,4 +14,5 @@ abstract class AbstractAnimal {
 
     abstract fun eat(): String
     abstract fun getInfo(): String
+    abstract fun returnThanks(): String
 }
