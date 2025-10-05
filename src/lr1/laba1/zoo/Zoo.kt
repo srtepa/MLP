@@ -5,18 +5,18 @@ import laba1.people.Viewer
 import kotlin.random.Random
 
 //класс зоопарка с первичным конструктором
-class Zoo(var name: String, var capacity: Int) {
+class Zoo {
     private var animals = ArrayList<AbstractAnimal>()
 
     fun acceptViewer(viewer: Viewer){//принятие посетителя с выдачей животного
-        println("$name сейчас выдаст животное для просмотра зрителю ${viewer.name}...")
+        println("Зоопарк сейчас выдаст животное для просмотра зрителю...")
         val animal = giveAnimal()
         viewer.viewAnimal(animal)
     }
 
     private fun giveAnimal(): AbstractAnimal{
         if (animals.isEmpty()) {
-            throw IllegalStateException("В $name нет животных!")
+            throw IllegalStateException("В зоопарке нет животных!")
         }
 
         var randomIndex = Random.nextInt(0, animals.size)
@@ -25,8 +25,6 @@ class Zoo(var name: String, var capacity: Int) {
     }
 
     fun addAnimal(animal: AbstractAnimal) {//добавление животного в зоопарк
-        if(animals.size==capacity) return
-
         animals.add(animal)
     }
 

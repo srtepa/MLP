@@ -7,16 +7,16 @@ import laba1.people.Viewer
 import laba1.zoo.Zoo
 
 fun main() {
-    val zoo = Zoo("Минский зоопарк", 10) //создаем зоопарк
+    val zoo = Zoo() //создаем зоопарк
 
-    val worker = Worker("Иван", 30, 5)//создаем работника и животных
-    val elephant = Elephant("Боб", 15, "Большое тело", "Толстые лапы", "Длинный хобот", 1)
-    val ostrich = Ostrich("Оскар", 5, "Длинная шея", "Крылья", 3)
+    val worker = Worker()//создаем работника и животных
+    val elephant = Elephant("Большое тело", "Толстые лапы", "Длинный хобот")
+    val ostrich = Ostrich("Длинная шея", "Крылья")
 
     zoo.addAnimal(elephant)
     zoo.addAnimal(ostrich)
 
-    val viewer = Viewer("Алиса")
+    val viewer = Viewer()
 
     //реализовываем диаграмму последовательностей
     println("Зритель хочет посмотреть на животное...")
@@ -34,10 +34,8 @@ fun main() {
     println()
 
     worker.cleanCage(elephant)
-    println(elephant.returnThanks())
     println()
 
     worker.cleanCage(ostrich)
-    println(ostrich.returnThanks())
     println()
 }

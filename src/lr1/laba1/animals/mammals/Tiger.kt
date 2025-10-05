@@ -1,39 +1,27 @@
 package laba1.animals.mammals
 
-class Tiger : AbstractMammal {
-    override var type = "Тигр"//поля класса
-    private var name: String
-    private var age: Int
-    private var numOfRoom: Int
-    private var stripes = "Полосы на шерсти"
+class Tiger(
+    body: String,
+    paws: String
+) : AbstractMammal(body, paws, "Тигр") {
 
-    //вторичный конструктор класса
-    constructor(name: String, age: Int, body : String, paws : String, numOfRoom: Int) : super(body, paws){
-        this.body=body
-        this.paws=paws
-        this.age=age
-        this.name=name
-        this.numOfRoom=numOfRoom
-    }
+    private var stripes: String = "Полосы на шерсти"
 
     //переопред. ф-ции
     override fun eat(): String {
-        return "Тигр $name ест!"
+        return "Тигр ест!"
     }
 
     override fun getInfo(): String {
         return """
             Информация о тигре:
-                имя: $name
-                возраст: $age
                 тело: $body
                 лапы: $paws
                 полосы: $stripes
-                номер вольера: $numOfRoom
         """.trimIndent()
     }
 
     override fun returnThanks(): String {
-        return "Тигр $name благодарит работника!"
+        return "Тигр благодарит работника!"
     }
 }

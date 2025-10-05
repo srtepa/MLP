@@ -1,10 +1,8 @@
 package laba1.animals.birds
 import laba1.animals.AbstractAnimal
 
-abstract class AbstractBird : AbstractAnimal {//наследуем от аб. кл. AbstractAnimal
-    protected var wings : String
-
-    constructor(body : String, wings : String ) : super(body){
-        this.wings=wings
-    }
-}
+abstract class AbstractBird(
+    body: String,
+    protected var wings: String,
+    type: String = "Неопределенное животное"
+) : AbstractAnimal(body, type)

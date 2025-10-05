@@ -1,17 +1,9 @@
 package laba1.animals
 
-abstract class AbstractAnimal {//создаем абстрактный класс
-    protected var body: String
-    open var type = "Неопределенное животное"
-
-    constructor(){//создаем конструктора класса
-        this.body = "Неопределенное животное"
-    }
-
-    constructor(body: String){
-        this.body=body
-    }
-
+abstract class AbstractAnimal(
+    protected var body: String,
+    open var type: String = "Неопределенное животное"
+) {
     //объявляем абстрактные ф-ции
     abstract fun eat(): String
     abstract fun getInfo(): String
