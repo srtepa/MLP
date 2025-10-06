@@ -27,6 +27,4 @@ class Zoo {
     fun addAnimal(animal: AbstractAnimal) {//добавление животного в зоопарк
         animals.add(animal)
     }
-
-
 }
