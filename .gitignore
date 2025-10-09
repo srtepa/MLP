@@ -1,30 +1,58 @@
-# Compiled class file
+# macOS
+.DS_Store
+.localized
+.AppleDouble
+.LSOverride
+
+# Xcode
+.build/
+*.xcodeproj/
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcodeproj/xcuserdata/
+build/
+DerivedData/
+*.xcworkspace/
+!*.xcworkspace/contents.xcworkspacedata
+!*.xcworkspace/xcshareddata/
+!*.xcworkspace/xcuserdata/
+*.playground/
+*.swiftpm/
+*.ipa
+*.dSYM
+
+# Swift Package Manager (if you use it)
+.swiftpm/
+Package.resolved
+.build/
+
+# IntelliJ IDEA (for Kotlin)
+.idea/
+*.iml
+*.iws
+out/
+
+# Kotlin specific
+*.kmm
 *.class
 
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
-
-# Kotlin Gradle plugin data, see https://kotlinlang.org/docs/whatsnew20.html#new-directory-for-kotlin-data-in-gradle-projects
+# Gradle (if used for Kotlin/Android)
+.gradle/
+build/
+captures/
+.gradle-enterprise/
 .kotlin/
+.kotlin-build/
 
-.idea
-/out/
+# Carthage (if used for Swift dependencies)
+Carthage/Build/
+
+# Cocoapods (if used for Swift dependencies)
+Pods/
+*.xcworkspace # already covered, but good to re-iterate
+Podfile.lock
+
+# Generic
+*.log
+*.temp
+*.tmp
