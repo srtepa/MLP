@@ -1,8 +1,7 @@
-//
-//  main.swift
-//  laba2_project
-//
-//  Created by Степан Конон on 10.10.25.
-//
-
 import Foundation
+
+
+print("Task 1")
+print(addFractions(1, 2, 1, 2))
+print(addFractions(1, 3, 1, 2))
+print(addFractions(1, 4, 1, 4))
