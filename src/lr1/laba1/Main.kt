@@ -1,41 +1,68 @@
 package laba1
 
+import laba1.animals.AbstractAnimal
 import laba1.animals.mammals.Elephant
 import laba1.animals.birds.Ostrich
-import laba1.people.Worker
 import laba1.people.Viewer
+import laba1.people.Worker
+import laba1.zoo.AnimalFactory
 import laba1.zoo.Zoo
 
 fun main() {
-    val zoo = Zoo() //создаем зоопарк
+    val zoo = Zoo()
 
-    val worker = Worker()//создаем работника и животных
-    val elephant = Elephant("Большое тело", "Толстые лапы", "Длинный хобот")
-    val ostrich = Ostrich("Длинная шея", "Крылья")
+    val worker = Worker()
+
+    //используем паттерн "фабричное проектирование " для создания животных
+    val elephant = AnimalFactory.createAnimal("elephant") as Elephant
+    val ostrich = AnimalFactory.createAnimal("ostrich") as Ostrich
+    val tiger = AnimalFactory.createAnimal("tiger") as AbstractAnimal
+    val flamingo = AnimalFactory.createAnimal("flamingo") as AbstractAnimal
 
     zoo.addAnimal(elephant)
     zoo.addAnimal(ostrich)
+    zoo.addAnimal(tiger)
+    zoo.addAnimal(flamingo)
 
-    val viewer = Viewer()
+    println("Просмотр животных посетителями:")
 
-    //реализовываем диаграмму последовательностей
-    println("Зритель хочет посмотреть на животное...")
-    zoo.acceptViewer(viewer)
-    println()
+    for (i in 1..3) {
+        val viewer = Viewer("Посетитель $i")
+        println("\n${viewer.name} хочет посмотреть на животное...")
+        try {
+            zoo.acceptViewer(viewer)
+        } catch (e: IllegalStateException) {
+            println("Ошибка: ${e.message}")
+        } finally {
+            println("${viewer.name} закончил(а) просмотр.")
+        }
+    }
 
-    worker.feedAnimal(elephant)
-    println(elephant.eat())
-    println(elephant.returnThanks())
-    println()
 
-    worker.feedAnimal(ostrich)
-    println(ostrich.eat())
-    println(ostrich.returnThanks())
-    println()
+    println("\nКормление животных:")
+    val animalsToFeed = listOf(elephant, ostrich, tiger, flamingo)
+    for (animal in animalsToFeed) {
+        worker.feedAnimal(animal)
+        println(animal.eat())
+        println(animal.returnThanks())
+        println()
+    }
 
-    worker.cleanCage(elephant)
-    println()
 
-    worker.cleanCage(ostrich)
-    println()
+    println("Уборка клеток:")
+    for (animal in zoo.getAllAnimals()) {
+        worker.cleanCage(animal)
+        println()
+    }
+
+    val emptyZoo = Zoo()
+    println("\nПопытка посмотреть животных в пустом зоопарке:")
+    val viewerEmpty = Viewer("Посетитель пустого зоопарка")
+    try {
+        emptyZoo.acceptViewer(viewerEmpty)
+    } catch (e: IllegalStateException) {
+        println("Ошибка: ${e.message}")
+    } finally {
+        println("${viewerEmpty.name} закончил(а) просмотр в пустом зоопарке.")
+    }
 }

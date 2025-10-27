@@ -2,9 +2,9 @@ package laba1.people
 
 import laba1.animals.AbstractAnimal
 
-class Viewer { //класс зрителя зоопарка с первичным конструктором
-    fun viewAnimal(animal: AbstractAnimal){
-        println("Зритель смотрит на животное:")
+class Viewer(val name: String) { //имя посетителю для лучшей идентификации
+    fun viewAnimal(animal: AbstractAnimal) {
+        println("$name смотрит на животное:")
         println(animal.getInfo())
     }
 }

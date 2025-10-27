@@ -27,4 +27,8 @@ class Zoo {
     fun addAnimal(animal: AbstractAnimal) {//добавление животного в зоопарк
         animals.add(animal)
     }
+
+    fun getAllAnimals(): List<AbstractAnimal> {
+        return animals.toList()
+    }
 }
