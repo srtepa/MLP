@@ -12,5 +12,5 @@ numOfWords("Привет мир как дела")
 numOfWords("  Много   пробелов  ")
 
 print("\nПример использования перечисления")
-чprint(operateFractions(1, 2, 1, 3, op: .addition))
+print(operateFractions(1, 2, 1, 3, op: .addition))
 print(operateFractions(1, 2, 1, 3, op: .subtraction))
