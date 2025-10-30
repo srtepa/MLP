@@ -1,19 +1,10 @@
 import Foundation
 
-func numOfOdd(_ array: [Int]) {
-    var count = 0
-    
-    for number in array {
-        if number % 2 != 0 {
-            count += 1
-        }
-    }
-    
-    print("Число нечетных чисел в массиве: \(count)")
+
+func numOfOdd(_ array: [Int]) -> Int {
+    array.filter { $0 % 2 != 0 }.count
 }
 
-func numOfWords(_ str: String) {
-    let words = str.split(separator: " ").filter { !$0.isEmpty }
-    let count = words.count
-    print("Число слов в строке: \(count)")
+func numOfWords(_ str: String) -> Int {
+    str.split(separator: " ").filter { !$0.isEmpty }.count
 }

@@ -1,8 +1,7 @@
 import Foundation
 
 
-func addFractions(_ n: Int, _ m: Int, _ q: Int, _ p:Int) -> String{
-    
+func addFractions(_ n: Int, _ m: Int, _ q: Int, _ p:Int) -> String {
     var x: Int = 0
     var y: Int = 0
     
@@ -17,12 +16,14 @@ func addFractions(_ n: Int, _ m: Int, _ q: Int, _ p:Int) -> String{
         }
     
     let NOD = algEvclid(x, y)
+    
     x/=NOD
     y/=NOD
     
     if x==1 && y==1{
         return "1"
     }
+    
     return "\(x)/\(y)"
 }
 
