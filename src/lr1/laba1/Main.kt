@@ -8,12 +8,14 @@ import laba1.people.Worker
 import laba1.zoo.AnimalFactory
 import laba1.zoo.Zoo
 
+
+//доп. задание: добавить try-catch-finally, любой паттерн проектирования и циклы
 fun main() {
     val zoo = Zoo()
 
     val worker = Worker()
 
-    //используем паттерн "фабричное проектирование " для создания животных
+    //используем паттерн "фабричный метод " для создания животных
     val elephant = AnimalFactory.createAnimal("elephant") as Elephant
     val ostrich = AnimalFactory.createAnimal("ostrich") as Ostrich
     val tiger = AnimalFactory.createAnimal("tiger") as AbstractAnimal
@@ -34,7 +36,7 @@ fun main() {
         } catch (e: IllegalStateException) {
             println("Ошибка: ${e.message}")
         } finally {
-            println("${viewer.name} закончил(а) просмотр.")
+            println("${viewer.name} закончил просмотр.")
         }
     }
 
@@ -63,6 +65,6 @@ fun main() {
     } catch (e: IllegalStateException) {
         println("Ошибка: ${e.message}")
     } finally {
-        println("${viewerEmpty.name} закончил(а) просмотр в пустом зоопарке.")
+        println("${viewerEmpty.name} закончил просмотр в пустом зоопарке.")
     }
 }

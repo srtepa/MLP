@@ -6,7 +6,7 @@ import laba1.animals.birds.Ostrich
 import laba1.animals.mammals.Elephant
 import laba1.animals.mammals.Tiger
 
-//паттерн "фабричное проектирование" для создания животных
+//паттерн "фабричное метод" для создания животных
 object AnimalFactory {
     fun createAnimal(type: String): AbstractAnimal {
         return when (type.lowercase()) {
